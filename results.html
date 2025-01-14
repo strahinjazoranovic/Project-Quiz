@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Multiplayer Quiz</title>
+  <title>Resultaten</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,9 +15,14 @@
     <a href="results.html">Resultaten</a>
   </div>
 
-  <div class="container">
-    <h1>Welkom bij de Multiplayer Quiz!</h1>
-    <a href="login.html"><button>Inloggen</button></a>
+  <div class="results-container">
+    <h1>Je hebt de quiz voltooid!</h1>
+    <p id="score">Je score is: 0</p>
+    <a href="index.html"><button>Terug naar Home</button></a>
   </div>
+
+  <script>
+    document.getElementById("score").innerText = "Je score is: " + localStorage.getItem("score");
+  </script>
 </body>
 </html>

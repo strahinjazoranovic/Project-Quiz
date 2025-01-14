@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Multiplayer Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar toevoegen -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="login.html">Inloggen</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="results.html">Resultaten</a>
+  </div>
+
+  <div class="quiz-container">
+    <h1>Welkom, <span id="player-name"></span>!</h1>
+    <h2>De Quiz: Kies een categorie!</h2>
+    <div id="quiz-options">
+      <button onclick="startQuiz('arts')">Kunst</button>
+      <button onclick="startQuiz('voetbal')">Voetbal</button>
+      <button onclick="startQuiz('eten')">Eten</button>
+      <button onclick="startQuiz('games')">Games</button>
+      <button onclick="startQuiz('auto')">Auto's</button>
+    </div>
+
+    <div id="quiz-game" style="display: none;">
+      <h3 id="question"></h3>
+      <div id="answers"></div>
+      <p id="timer">Tijd: 30 seconden</p>
+      <button onclick="nextQuestion()">Volgende vraag</button>
+    </div>
+  </div>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

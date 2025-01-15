@@ -1,0 +1,306 @@
+/* hier wordt de achtergrondkleur bewerkt*/
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(60deg,#9953F5, black);
+}
+
+/* Dit is zodat je niet de scrollbar ziet */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Dit is de bovenste tekst op de elke pagina*/
+#header {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 120px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* dit is voor alle links */
+a {
+    text-decoration: none;
+}
+
+/* dit is de tekst die je ziet op de home pagina*/
+#hometext {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    animation: fade 1s;
+    font-size: 10px;
+    margin-bottom: 500px;
+}
+
+/* dit is de tekst die je ziet op de quizpagina*/
+#quiztext {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    animation: SlideinLeft 0.8s;
+    font-size: 12px;
+}
+
+
+/* dit is de property die gebruikt wordt voor de kleuranimatie die rond de border van een element gaat(Is op dit moment niet in gebruik voor het animatiedeel)*/
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* Dit heeft allemaal te maken met het glow effect dat je kunt zien op elke textbox */
+#form::after,
+#hometext::after,
+#form::before,
+#hometext::before,
+#quiztext::after,
+#quiztext::before,
+.hidden::after,
+.hidden::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #faf0e6, white, #faf0e6);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    opacity: 1;
+    padding: 4px;
+    border-radius: 20px;
+    animation: 8s spin linear infinite;
+}
+
+/* Hier krijgt het licht dat uit de gradient komt een blur effect */
+#form::before,
+#hometext::before,
+#quiztext::before,
+.hidden::before {
+    filter: blur(1.5rem)
+}
+
+/* dit is voor de knop die je ziet op de home pagina om verder te gaan naar de taalpagina*/
+#homebutton {
+    background-color: rgb(81, 231, 81);
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px;
+    margin: 0px;
+    border-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* dit is voor de knop die je ziet op de taalpagina om je taal te kiezen en vervolgens verder te gaan naar de quizvragen*/
+#quizbutton {
+    background-color: rgb(81, 231, 81);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px;
+    border-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* dit is voor de knop op taal.html om de engels quiz te starten*/
+#travisscott,
+#playboicarti,
+#kendricklamar,
+#kanye,
+#future,
+#secret {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 24px;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* dit is voor als je hovert boven de homebutton en quizbutton */
+#homebutton:hover,
+#travisscott:hover,
+#playboicarti:hover,
+#kendricklamar:hover,
+#kanye:hover,
+#future:hover,
+#secret:hover {
+    transform: translateY(-2px);
+}
+
+/* Stijl voor de hoofdtitel in de quiz */
+.quiznederlands h1 {
+    font-weight: 28px;
+    color: #081b29;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+/* Stijl voor de container van de quiz */
+.quiz {
+    padding: 20px 0;
+    animation: fade 1s;
+}
+
+/* Stijl voor de subtitel in de quiz */
+.quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+/* dit is de buttons van de quiz-antwoorden */
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+}
+
+/* Stijl voor wanneer een knop wordt hoverd met de muis eroverheen beweegt */
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+/* Stijl voor wanneer een knop uitgeschakeld is */
+.btn:disabled {
+    cursor: no-drop;
+}
+
+/* Stijl voor de 'Next' knop */
+#next-btn {
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: #fff;
+    font-weight: 500;
+    width: 240px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Stijl voor een juiste antwoord */
+.correct {
+    background: #00ff6e;
+}
+
+
+/* Stijl voor een onjuiste antwoord  */
+.incorrect {
+    background: #ff0000;
+}
+
+
+@media (max-width: 1500px) {
+
+    #hometext,
+    #quiztext {
+        font-size: 12px;
+        margin-left: 300px;
+        margin-right: 300px;
+        animation: fade 1s;
+    }
+}
+
+/* responsiveness */
+@media (max-width: 1061px) {
+
+    #hometext,
+    #quiztext {
+        font-size: 12px;
+        margin-left: 40px;
+        margin-right: 40px;
+        animation: fade 1s;
+    }
+
+    #form1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 80px;
+        margin-right: 80px;
+        animation: fade 1s;
+    }
+
+    #foto {
+        width: 240px;
+        height: 240px;
+        animation: fade 1s;
+    }
+
+    #homebutton,
+    #quizbutton,
+    #travisscott,
+    #playboicarti,
+    #kendricklamar,
+    #kanye,
+    #future,
+    #secret {
+        font-size: 24px;
+        animation: fade 1s;
+    }
+}
+
+/* Dit is de animatie die gebruikt wordt voor de kleuranimatie die rond de border van een element gaat */
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+/* Dit is de animatie voor een element die links komt */
+@keyframes SlideinLeft {
+    from {
+        transform: translateX(-2400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+

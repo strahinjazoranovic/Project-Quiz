@@ -1,56 +1,32 @@
-<!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz - Multiplayer Quiz</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- Koppeling naar het externe CSS-bestand -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
 
 <body>
-  <!-- Navbar toevoegen -->
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="login.html">Inloggen</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="results.html">Resultaten</a>
-  </div>
-  
-  <!-- Lights (CSS animation effect) -->
-  <div class="lights-container">
-    <div class="light x1"></div>
-    <div class="light x2"></div>
-    <div class="light x3"></div>
-    <div class="light x4"></div>
-    <div class="light x5"></div>
-    <div class="light x6"></div>
-    <div class="light x7"></div>
-    <div class="light x8"></div>
-    <div class="light x9"></div>
-  </div>
-  
-  <div class="quiz-container">
-    <h1>Welkom, <span id="player-name">Speler</span>!</h1>
-    <h2>De Quiz: Kies een categorie!</h2>
-    
-    <div id="quiz-options">
-        <button onclick="startQuiz('arts')">Kunst</button>
-        <button onclick="startQuiz('voetbal')">Voetbal</button>
-        <button onclick="startQuiz('eten')">Eten</button>
-        <button onclick="startQuiz('games')">Games</button>
-        <button onclick="startQuiz('auto')">Auto's</button>
-    </div>
-  </div>
+    <a href="index.html">
+        <h1 id="header">Quize</h1>
+    </a>
+    <div id="quiztext">
 
-  <div id="quiz-game" style="display: none;">
-    <h3 id="question"></h3>
-    <div id="answers"></div>
-    <p id="timer">Tijd: 30 seconden</p>
-    <button onclick="nextQuestion()">Volgende vraag</button>
-  </div>
+        <div class="quiznederlands">
+            <h1>Playboi Carti</h1>
+            <div id="quiz">
+                <button id="playboicarti">Start Quiz</button>
+                <h2 id="questions"></h2>
+                <div id="answers-buttons">
 
-  <script src="quiz.js"></script> <!-- Koppeling naar quiz.js voor quiz logica -->
+                </div>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+      </div>
 </body>
+<script src="js/quiz.js"></script>
 
 </html>

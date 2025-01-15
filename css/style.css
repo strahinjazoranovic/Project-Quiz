@@ -686,17 +686,29 @@ background-size:cover;
 
 
 .button-text{
-	padding: 1rem 3rem;
-	color: rgb(252, 246, 246);
-	border-radius: 10rem;
-	border: 2px solid rgb(245, 237, 237);
-	font-weight: 500;
-	font-size: 2rem;
-
+	align-items: center;
+    background-image: linear-gradient(60deg,#9953F5, black);
+    border: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 24px;
+    justify-content: center;
+    height: 50px;
+    width: 60%;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .button-text:hover{
-	background-color: rgb(119, 159, 175);
+	  transform: translateY(-2px);
 }
 
 

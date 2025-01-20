@@ -1,3 +1,5 @@
+/* Deze stylesheet wordt gebruikt voor de quiz */
+
 /* hier wordt de achtergrondkleur bewerkt*/
 body {
     margin: 0px;
@@ -19,6 +21,9 @@ body {
     margin-bottom: 120px;
 }
 
+#questions {
+    margin: 15px;
+}
 
 /* dit is voor alle links */
 a {
@@ -34,6 +39,7 @@ a {
     padding: 20px;
     margin-left: 500px;
     margin-right: 500px;
+    margin-top: 350px;
     animation: SlideinLeft 0.8s;
     font-size: 12px;
 }
@@ -82,12 +88,7 @@ a {
 }
 
 /* dit is voor de knop op taal.html om de engels quiz te starten*/
-#travisscott,
-#playboicarti,
-#kendricklamar,
-#kanye,
-#future,
-#secret {
+#artisten, #voetbal, #eten, #game, #auto {
     align-items: center;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     border: 0;
@@ -100,6 +101,7 @@ a {
     height: 50px;
     width: 100%;
     padding: 3px;
+    margin-top: 10px;
     text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
@@ -109,13 +111,9 @@ a {
 }
 
 /* dit is voor als je hovert boven de homebutton en quizbutton */
-#travisscott:hover,
-#playboicarti:hover,
-#kendricklamar:hover,
-#kanye:hover,
-#future:hover,
-#secret:hover {
-    transform: translateY(-2px);
+#artisten:hover, #voetbal:hover, #eten:hover, #game:hover, #auto:hover {
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Stijl voor de hoofdtitel in de quiz */

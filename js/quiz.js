@@ -2,9 +2,9 @@
 document.body.addEventListener("click", (event) => {
   const buttonId = event.target.id;
 
-  if (["playboicarti"].includes(buttonId)) {
+  if (["artisten"].includes(buttonId)) {
 
-    if (buttonId === "playboicarti") playboiQuiz();
+    if (buttonId === "artisten") playboiQuiz();
 
     // Dit zorgt ervoor dat je de start knop niet meer ziet als je erop klikt
     event.target.style.display = "none";
